@@ -1,6 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonModal } from '@ionic/angular';
-import { OverlayEventDetail } from '@ionic/core/components';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-tab1',
@@ -9,15 +8,11 @@ import { OverlayEventDetail } from '@ionic/core/components';
 })
 
 export class Tab1Page {
-  @ViewChild(IonModal) modal: IonModal;
+  public data = ['Calabresa', 'Veganinha', '3 Queijos'];
+  public results = [...this.data];
 
-  message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
-
-  cancel() {
-    this.modal.dismiss('cancel');
+  handleChange(event) {
+    const query = event.target.value.toLowerCase();
+    this.results = this.data.filter(d => d.toLowerCase().indexOf(query) > -1);
   }
-  confirm() {
-    this.modal.dismiss('confirm');
-  }
-
 }

@@ -12,13 +12,19 @@
 </ion-header>
 
 <ion-content color="dark" [fullscreen]="true">
-  <ion-searchbar color="light" placeholder="Pesquise algo!"></ion-searchbar>
+<ion-searchbar color="light" showclearbutton="always" clear-icon="trash-bin" [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar>
+<ion-list >
+  <ion-item color="dark" *ngFor="let result of results">
+    <ion-label  >{{ result }}</ion-label>
+  </ion-item>
+</ion-list>
 
   <ion-card color="dark">
     <ion-card-content>
       <img alt="Silhouette of mountains"
         src="https://t4.ftcdn.net/jpg/02/96/96/71/360_F_296967135_DAjY06XgRvqzYr3WYzHvmQp4C66QxM00.jpg" />
     </ion-card-content>
+
 
     <ion-card-header>
       <ion-card-title>Calabresa</ion-card-title>
