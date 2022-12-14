@@ -31,7 +31,16 @@ const routes: Routes = [
   {
     path: 'tabs3',
     loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+  },
+  {
+    path: 'pedido',
+    loadChildren: () => import('./pedido/pedido.module').then( m => m.PedidoPageModule)
+  },
+  {
+    path: 'tabs2',
+    loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
   }
+
 
 ];
 @NgModule({
