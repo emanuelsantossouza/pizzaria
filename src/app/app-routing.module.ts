@@ -33,13 +33,34 @@ const routes: Routes = [
     loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
   },
   {
-    path: 'pedido',
-    loadChildren: () => import('./pedido/pedido.module').then( m => m.PedidoPageModule)
-  },
-  {
     path: 'tabs2',
     loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
+  },
+  {
+    path: 'calabre',
+    loadChildren: () => import('./acrescimo/calabre/calabre.module').then( m => m.CalabrePageModule)
+  },
+  {
+    path: 'cogumelo',
+    loadChildren: () => import('./acrescimo/cogumelo/cogumelo.module').then( m => m.CogumeloPageModule)
+  },
+  {
+    path: 'pepperoni',
+    loadChildren: () => import('./acrescimo/pepperoni/pepperoni.module').then( m => m.PepperoniPageModule)
+  },
+  {
+    path: 'mussarela',
+    loadChildren: () => import('./acrescimo/mussarela/mussarela.module').then( m => m.MussarelaPageModule)
+  },
+  {
+    path: 'frango',
+    loadChildren: () => import('./acrescimo/frango/frango.module').then( m => m.FrangoPageModule)
+  },
+  {
+    path: 'veganinha',
+    loadChildren: () => import('./acrescimo/veganinha/veganinha.module').then( m => m.VeganinhaPageModule)
   }
+
 
 
 ];

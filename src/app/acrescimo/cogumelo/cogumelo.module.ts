@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PedidoPageRoutingModule } from './pedido-routing.module';
+import { CogumeloPageRoutingModule } from './cogumelo-routing.module';
 
-import { PedidoPage } from './pedido.page';
+import { CogumeloPage } from './cogumelo.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PedidoPageRoutingModule
+    CogumeloPageRoutingModule
   ],
-  declarations: [PedidoPage]
+  declarations: [CogumeloPage]
 })
-export class PedidoPageModule {}
+export class CogumeloPageModule {}

@@ -1,9 +1,54 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-back-button slot="start"></ion-back-button>
     <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
 
+  <ion-item color="dark">
+    <img src="http://st.depositphotos.com/1900347/4146/i/450/depositphotos_41466555-Image-of-slice-of-pizza.jpg">
+  </ion-item>
+  <form>
+
+    <ion-item color="dark"  >
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item  color="dark">
+    <ion-label  position="stacked">Nome</ion-label>
+    <ion-input ></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label position="stacked">CPF</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+
+    <ion-item  color="dark">
+      <ion-label position="stacked">Senha</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label position="stacked">Confirmar senha</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink="/login" expand="block" fill="clear">Voltar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" fill="outline">
+          Limpar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-button type="submit" expand="block" color="danger">Registrar</ion-button>
+
+  </form>
 </ion-content>

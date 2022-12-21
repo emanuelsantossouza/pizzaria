@@ -3,27 +3,27 @@
     <ion-buttons routerLink="/tabs1" slot="start">
       <ion-button>Cancela</ion-button>
     </ion-buttons>
-    <ion-title> Pedido</ion-title>
+    <ion-title>Pedido</ion-title>
     <ion-buttons slot="end">
       <ion-button routerLink="/tabs2" [strong]="true">Confimar</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark" class="ion-padding">
+<ion-content color="dark" *ngFor="let pedido of listaAcrescimo" color="dark" class="ion-padding">
 
-  <ion-card>
-    <img src="https://t4.ftcdn.net/jpg/02/96/96/71/360_F_296967135_DAjY06XgRvqzYr3WYzHvmQp4C66QxM00.jpg" alt="">
+  <ion-card color="darh">
+    <img [src]="pedido.cartaz" alt="">
   </ion-card>
 
 
   <ion-item color="dark">
-    <ion-card-title class="f">Acrescimo</ion-card-title>
+    <ion-card-title color="light">Acrescimo</ion-card-title>
   </ion-item>
 
   <ion-list>
     <ion-item color="dark">
-      <ion-card-subtitle class="f">
+      <ion-card-subtitle color="light">
         Borda com Catupiry
       </ion-card-subtitle>
       <ion-badge slot="end">R$ 5</ion-badge>
@@ -31,7 +31,7 @@
     </ion-item>
 
     <ion-item color="dark">
-      <ion-card-subtitle class="f">
+      <ion-card-subtitle color="light">
         Borda com Frango
       </ion-card-subtitle>
       <ion-badge slot="end">R$ 5</ion-badge>
@@ -39,7 +39,7 @@
     </ion-item>
 
     <ion-item color="dark">
-      <ion-card-subtitle class="f">
+      <ion-card-subtitle color="light">
         Borda com Chocolate
       </ion-card-subtitle>
       <ion-badge slot="end">R$ 5</ion-badge>
@@ -48,7 +48,7 @@
 
 
     <ion-item color="dark">
-      <ion-card-subtitle class="f">
+      <ion-card-subtitle color="light">
         Borda com Cheddar
       </ion-card-subtitle>
       <ion-badge slot="end">R$ 5</ion-badge>
@@ -57,7 +57,7 @@
 
 
     <ion-item color="dark">
-      <ion-card-subtitle class="f">
+      <ion-card-subtitle color="light">
         Borda com Filé
       </ion-card-subtitle>
       <ion-badge slot="end">R$ 10</ion-badge>

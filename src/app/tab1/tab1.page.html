@@ -12,126 +12,31 @@
 </ion-header>
 
 <ion-content color="dark" [fullscreen]="true">
-<ion-searchbar color="light" showclearbutton="always" clear-icon="trash-bin" [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar>
-<ion-list >
+<ion-searchbar color="light" placeholder="Encontre a sua uma pizza!!" showclearbutton="always" clear-icon="trash-bin" [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar>
+<ion-list>
   <ion-item color="dark" *ngFor="let result of results">
-    <ion-label  >{{ result }}</ion-label>
+    <ion-label >{{ result }}</ion-label>
   </ion-item>
 </ion-list>
 
-  <ion-card color="dark">
+
+  <ion-card *ngFor="let pizza of listaPizza" color="dark">
     <ion-card-content>
-      <img alt="Silhouette of mountains"
-        src="https://t4.ftcdn.net/jpg/02/96/96/71/360_F_296967135_DAjY06XgRvqzYr3WYzHvmQp4C66QxM00.jpg" />
+        <img alt="Silhouette of mountains"
+        [src]="pizza.cartaz" />
     </ion-card-content>
 
 
     <ion-card-header>
-      <ion-card-title>Calabresa</ion-card-title>
-      <ion-label>Calabresa, Cebola, Azeitona, Orégano e Azeite</ion-label>
+      <ion-card-title>{{pizza.nomePizza}}</ion-card-title>
+      <ion-badge color="liight" *ngFor="let ing of pizza.incredientes">{{ing}}</ion-badge>
     </ion-card-header>
 
     <ion-item color="dark">
-      <ion-button routerLink="/pedido" slot="end">
+      <ion-button [routerLink]='pizza.routa' slot="end">
         <ion-icon slot="icon-only" name="cart"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-card>
 
-
-  <ion-card color="dark">
-    <ion-card-content>
-      <img alt="Silhouette of mountains"
-        src="https://www.pingodoce.pt/wp-content/uploads/2020/03/pizza-massa-integral-cogumelos.jpg" />
-    </ion-card-content>
-
-    <ion-card-header>
-      <ion-card-title>Cogumelo</ion-card-title>
-      <ion-label>Cogumelo, Mussarela, Pimenta Calabresa...</ion-label>
-    </ion-card-header>
-
-
-  <ion-item color="dark">
-    <ion-button routerLink="/pedido" slot="end">
-        <ion-icon slot="icon-only" name="cart"></ion-icon>
-      </ion-button>
-    </ion-item>
-
-
-  </ion-card>
-
-  <ion-card color="dark">
-    <ion-card-content>
-      <img alt="Silhouette of mountains"
-        src="https://img.itdg.com.br/tdg/images/blog/uploads/2022/07/5-itens-necessarios-para-se-tornar-um-pizzaiolo-neste-Dia-da-Pizza.jpg?mode=crop&width={:width=%3E150,%20:height=%3E130}" />
-    </ion-card-content>
-
-    <ion-card-header>
-      <ion-card-title>Pepperoni</ion-card-title>
-      <ion-card-subtitle>Salame Italiano, Pimentão em Rodelas...</ion-card-subtitle>
-
-    </ion-card-header>
-
-    <ion-item color="dark">
-      <ion-button routerLink="/pedido" slot="end">
-        <ion-icon slot="icon-only" name="cart"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-card>
-
-  <ion-card color="dark">
-    <ion-card-content>
-      <img alt="Silhouette of mountains"
-        src="https://media-cdn.tripadvisor.com/media/photo-s/0f/07/37/73/pizza-gran-queijo-mussarela.jpg" />
-    </ion-card-content>
-
-    <ion-card-header>
-      <ion-card-title>Mussarela</ion-card-title>
-      <ion-label>Mussarela, Requeijão, Tomate e Orégano</ion-label>
-
-    </ion-card-header>
-
-    <ion-item color="dark">
-      <ion-button routerLink="/pedido" slot="end">
-        <ion-icon slot="icon-only" name="cart"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-card>
-
-  <ion-card color="dark">
-    <ion-card-content>
-      <img alt="Silhouette of mountains"
-        src="https://www.comidaereceitas.com.br/img/sizeswp/1200x675/2019/08/Pizza_frango_requeijao-1.jpg" />
-    </ion-card-content>
-
-    <ion-card-header>
-      <ion-card-title>Frango</ion-card-title>
-      <ion-label>Frango, Tomate, Queijo, Pimentão, Pimenta...</ion-label>
-
-    </ion-card-header>
-
-    <ion-item color="dark">
-      <ion-button routerLink="/pedido" slot="end">
-        <ion-icon slot="icon-only" name="cart"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-card>
-
-  <ion-card color="dark">
-    <ion-card-content>
-      <img alt="Silhouette of mountains"
-        src="https://www.mundoboaforma.com.br/wp-content/uploads/2022/04/Pizza-vegana.jpg" />
-    </ion-card-content>
-
-    <ion-card-header>
-      <ion-card-title>Veganinha</ion-card-title>
-      <ion-label>Frango, Tomate, Queijo, Pimentão, Pimenta...</ion-label>
-
-    </ion-card-header>
-
-    <ion-item color="dark">
-      <ion-button routerLink="/pedido" slot="end">
-        <ion-icon slot="icon-only" name="cart"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-card>
+</ion-content>
