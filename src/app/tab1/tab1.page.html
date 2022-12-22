@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content color="dark" [fullscreen]="true">
-<ion-searchbar color="light" placeholder="Encontre a sua uma pizza!!" showclearbutton="always" clear-icon="trash-bin" [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar>
+<ion-searchbar color="light" placeholder="Encontre a sua uma pizza!!" showclearbutton="always" clear-icon="trash-bin" [debounce]="1000"></ion-searchbar>
 <ion-list>
   <ion-item color="dark" *ngFor="let result of results">
     <ion-label >{{ result }}</ion-label>
@@ -33,7 +33,7 @@
     </ion-card-header>
 
     <ion-item color="dark">
-      <ion-button [routerLink]='pizza.routa' slot="end">
+      <ion-button (click)="exibirPizza(pizza)" slot="end">
         <ion-icon slot="icon-only" name="cart"></ion-icon>
       </ion-button>
     </ion-item>

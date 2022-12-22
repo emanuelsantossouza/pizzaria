@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CogumeloPageRoutingModule } from './cogumelo-routing.module';
+import { DadosPizzaPageRoutingModule } from './dados-pizza-routing.module';
 
-import { CogumeloPage } from './cogumelo.page';
+import { DadosPizzaPage } from './dados-pizza.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CogumeloPageRoutingModule
+    DadosPizzaPageRoutingModule
   ],
-  declarations: [CogumeloPage]
+  declarations: [DadosPizzaPage]
 })
-export class CogumeloPageModule {}
+export class DadosPizzaPageModule {}

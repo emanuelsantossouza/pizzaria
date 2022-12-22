@@ -37,29 +37,10 @@ const routes: Routes = [
     loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule)
   },
   {
-    path: 'calabre',
-    loadChildren: () => import('./acrescimo/calabre/calabre.module').then( m => m.CalabrePageModule)
-  },
-  {
-    path: 'cogumelo',
-    loadChildren: () => import('./acrescimo/cogumelo/cogumelo.module').then( m => m.CogumeloPageModule)
-  },
-  {
-    path: 'pepperoni',
-    loadChildren: () => import('./acrescimo/pepperoni/pepperoni.module').then( m => m.PepperoniPageModule)
-  },
-  {
-    path: 'mussarela',
-    loadChildren: () => import('./acrescimo/mussarela/mussarela.module').then( m => m.MussarelaPageModule)
-  },
-  {
-    path: 'frango',
-    loadChildren: () => import('./acrescimo/frango/frango.module').then( m => m.FrangoPageModule)
-  },
-  {
-    path: 'veganinha',
-    loadChildren: () => import('./acrescimo/veganinha/veganinha.module').then( m => m.VeganinhaPageModule)
+    path: 'dados-pizza',
+    loadChildren: () => import('./dados-pizza/dados-pizza.module').then( m => m.DadosPizzaPageModule)
   }
+
 
 
 

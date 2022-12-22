@@ -1,5 +1,8 @@
+import { DadosService } from './../services/dados.service';
 import { Component } from '@angular/core';
 import { IPizza } from '../models/IPizza.models';
+import { Router } from '@angular/router';
+import { IPizzaAcrescimo } from '../acrescimo/models/IPizzaAcrescimo';
 
 
 @Component({
@@ -48,14 +51,15 @@ export class Tab1Page {
       routa: '/veganinha'
     }
   ];
+  data: any;
+  results: any;
 
+  constructor(
+    public dadosService: DadosService,
+    public route: Router) { }
 
-
-  public data = ['Calabresa', 'Veganinha', '3 Queijos'];
-  public results = [...this.data];
-
-  handleChange(event) {
-    const query = event.target.value.toLowerCase();
-    this.results = this.data.filter(d => d.toLowerCase().indexOf(query) > -1);
+  exibirPizza(pizza: IPizzaAcrescimo) {
+    this.dadosService.guardaDados('pizza', pizza);
+    this.route.navigateByUrl('/dados-pizza');
   }
 }
