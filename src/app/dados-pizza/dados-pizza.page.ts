@@ -1,4 +1,4 @@
-import { IPizzaAcrescimo } from './../acrescimo/models/IPizzaAcrescimo';
+import { IPizzaAcrescimo } from '../models/IPizzaAcrescimo';
 import { DadosService } from './../services/dados.service';
 import { Component, OnInit } from '@angular/core';
 

@@ -2,7 +2,7 @@ import { DadosService } from './../services/dados.service';
 import { Component } from '@angular/core';
 import { IPizza } from '../models/IPizza.models';
 import { Router } from '@angular/router';
-import { IPizzaAcrescimo } from '../acrescimo/models/IPizzaAcrescimo';
+import { IPizzaAcrescimo } from '../models/IPizzaAcrescimo';
 
 
 @Component({
