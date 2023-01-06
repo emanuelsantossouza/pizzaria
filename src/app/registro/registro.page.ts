@@ -54,7 +54,7 @@ export class RegistroPage implements OnInit {
       senha: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
       confirmaSenha: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
     }, {
-      validator: comparaValidator('senha', 'confirmaSenha',)
+      validator: comparaValidator('senha', 'confirmaSenha')
     }
 
     );
@@ -63,20 +63,20 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
   }
 
- async salvarCadastro() {
-   if (this.formCadastro.valid) {
-     this.usuario.nome = this.formCadastro.value.nome;
-     this.usuario.email = this.formCadastro.value.email;
-     this.usuario.cpf = this.formCadastro.value.cpf;
-     this.usuario.senha = this.formCadastro.value.senha;
-     await this.storageService.set(this.usuario.email, this.usuario);
-     this.router.navigateByUrl('/tabs1');
-     alert('Cadastro bem sucedido');
-     console.log('Cadastro bem sucedido!');
-
-   } else {
-     console.log('erro no cadastro');
-   }
+  salvarCadastro() {
+    if (this.formCadastro.valid) {
+      this.usuario.nome = this.formCadastro.value.nome;
+      this.usuario.nome = this.formCadastro.value.email;
+      this.usuario.nome = this.formCadastro.value.cpf;
+      this.usuario.nome = this.formCadastro.value.senha;
+      this.storageService.set(this.usuario.cpf, this.usuario);
+      this.router.navigateByUrl('/tabs1');
+      alert('Cadastro bem sucedido');
+      console.log('Cadastro bem sucedido!');
+    } else {
+      alert('Campos Invalidos');
+    }
   }
+
 }
 
